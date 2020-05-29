@@ -1,0 +1,31 @@
+
+.example-card {
+  max-width: 350px;
+  max-height: 600px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.text {
+  margin: auto
+}
+
+.buttons {
+  text-align: right;
+
+  .refresh-button {
+    width: 100px;
+    color: white;
+    background: green;
+  }
+}
+
+mat-card img{
+  object-fit: cover;
+  width: 80%; /* Here you can use wherever you want to specify the width and also the height of the <img>*/
+  height: 80%;
+}
+
+
+

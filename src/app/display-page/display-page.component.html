@@ -1,0 +1,15 @@
+<mat-card *ngIf="weatherInfo" class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{cityInfo[0] | titlecase}}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="http://openweathermap.org/img/wn/{{weatherInfo.current.weather[0].icon}}@4x.png"
+       alt="Photo of weather icon">
+  <mat-card-content>
+    <p class="text">Current temperature: <b>{{weatherInfo.current.temp}} </b></p>
+    <p class="text">Current wind speed: <b>{{weatherInfo.current.wind_speed}} </b></p>
+    <p class="text"> Current UV index: <b>{{weatherInfo.current.uvi}}</b></p>
+  </mat-card-content>
+  <mat-card-actions class="buttons">
+    <button class="refresh-button" mat-button (click)="getWeather()">Refresh</button>
+  </mat-card-actions>
+</mat-card>

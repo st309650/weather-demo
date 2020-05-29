@@ -1,0 +1,18 @@
+<div class="search-box">
+  <mat-form-field appearance="fill">
+    <mat-label>City, State</mat-label>
+    <label>
+      <input matInput [formControl]="locationFormControl" placeholder="Ex. Dallas, TX">
+    </label>
+    <mat-error *ngIf="locationFormControl.hasError('required')">
+      Please enter a city
+    </mat-error>
+  </mat-form-field>
+</div>
+<div class="search-button">
+  <button mat-raised-button color="primary" (click)="getLocation()">
+    Submit
+  </button>
+</div>
+
+
